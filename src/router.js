@@ -2,7 +2,11 @@ import { createRouter, createWebHistory } from "vue-router";
 import useAuth from "./composable/useAuth";
 import Index from "./pages/index.vue";
 import About from "./pages/about.vue";
-import Secret from "./pages/secret.vue";
+import Faq from "./pages/faq.vue";
+import Contact from "./pages/contact.vue";
+import MyFruitStand from "./pages/myFruitStand.vue";
+import FruitToday from "./pages/fruitToday.vue";
+import Trending from "./pages/trending.vue";
 import Login from "./pages/login.vue";
 import NotFound from "./pages/404.vue";
 
@@ -25,9 +29,43 @@ const routes = [
     component: Login,
   },
   {
-    path: "/secret",
-    name: "Secret",
-    component: Secret,
+    path: "/faq",
+    name: "faq",
+    component: Faq,
+  },
+  {
+    path: "/contact",
+    name: "contact",
+    component: Contact,
+  },
+  {
+    path: "/myFruitStand",
+    name: "myFruitStand",
+    component: MyFruitStand,
+    beforeEnter: (to, from, next) => {
+      console.log(isAuthenticated);
+      if (!isAuthenticated.value) {
+        next("/login");
+      }
+      next();
+    },
+  },
+  {
+    path: "/fruitToday",
+    name: "fruitToday",
+    component: FruitToday,
+    beforeEnter: (to, from, next) => {
+      console.log(isAuthenticated);
+      if (!isAuthenticated.value) {
+        next("/login");
+      }
+      next();
+    },
+  },
+  {
+    path: "/trending",
+    name: "trending",
+    component: Trending,
     beforeEnter: (to, from, next) => {
       console.log(isAuthenticated);
       if (!isAuthenticated.value) {

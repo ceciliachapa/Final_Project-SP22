@@ -67,7 +67,7 @@ const { ready, start } = useTimeout(3000, { controls: true });
         shadow-2xl
       "
     >
-      <img class="h-64" src="../assets/login.png" alt="Hello BG" />
+      <img src="../assets/coconut_icon.png" width="150" alt="coco" />
       <form @submit.prevent="logginIn" class="flex flex-col p-4 space-y-4">
         <input
           name="username"

@@ -10,8 +10,12 @@
     "
   >
     <h2 class="text-6xl tracking-tighter font-bold text-yellow-900 bg-white">
-      About Page
+      Contact the developer here.
     </h2>
-    <img src="../assets/mango_icon.png" width="300" alt="About" />
+    <img
+      src="../assets/strawberry_icon.png"
+      width="300"
+      alt="strawberry_icon"
+    />
   </div>
 </template> 

@@ -11,41 +11,24 @@ const { isAuthenticated, user } = userAuth();
       flex flex-col
       items-center
       justify-center
-      space-y-16
+      space-y-20
       min-h-screen-nonav
     "
   >
     <h2
       v-if="!isAuthenticated"
-      class="
-        text-6xl
-        tracking-tighter
-        font-bold
-        text-yellow-700
-        font-mono
-        text-center
-      "
+      class="text-6xl font-bold text-gray-800 text-center"
     >
-      <h2>Welcome</h2>
+      <h2 class="bg-white tracking-tighter">Welcome</h2>
       <br />
-      <img src="../assets/welcome.png" alt="Hello" />
+      <img src="../assets/titlebanner.png" width="800" alt="Hello" />
     </h2>
-    <h2
-      v-else
-      class="
-        text-6xl
-        tracking-tighter
-        font-bold
-        text-yellow-700
-        font-mono
-        text-center
-      "
-    >
-      <h2>
+    <h2 v-else>
+      <h2 class="bg-gray-100 text-6xl tracking-tighter font-bold text-center">
         <p>Welcome {{ user }}...</p>
       </h2>
       <br />
-      <img src="../assets/welcome.png" alt="Hello" />
+      <div><img src="../assets/titlebanner.png" width="800" alt="Hello" /></div>
     </h2>
   </div>
 </template> 

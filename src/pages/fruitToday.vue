@@ -1,4 +1,3 @@
-<script setup></script>
 <template>
   <div
     class="
@@ -10,8 +9,8 @@
     "
   >
     <h2 class="text-6xl tracking-tighter font-bold text-yellow-900 bg-white">
-      About Page
+      Today's fruit...
     </h2>
-    <img src="../assets/mango_icon.png" width="300" alt="About" />
+    <img src="../assets/kiwi-fruit_icon.png" alt="kiwi" />
   </div>
 </template> 
